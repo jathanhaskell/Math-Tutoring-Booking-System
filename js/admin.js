@@ -405,8 +405,16 @@
   }
 
   async function ghGetFileSha(cfg, path) {
-    const url = 'https://api.github.com/repos/' + cfg.owner + '/' + cfg.repo + '/contents/' + path + '?ref=' + cfg.branch;
-    const res = await fetch(url, { headers: { Authorization: 'Bearer ' + cfg.token, Accept: 'application/vnd.github+json' } });
+    // Cache-busting query + no-store to avoid the browser returning a stale sha after a recent push.
+    const url = 'https://api.github.com/repos/' + cfg.owner + '/' + cfg.repo + '/contents/' + path + '?ref=' + cfg.branch + '&t=' + Date.now();
+    const res = await fetch(url, {
+      cache: 'no-store',
+      headers: {
+        Authorization: 'Bearer ' + cfg.token,
+        Accept: 'application/vnd.github+json',
+        'If-None-Match': ''
+      }
+    });
     if (res.status === 404) return { sha: null, content: null };
     if (!res.ok) throw new Error('GitHub GET failed: ' + res.status + ' ' + (await res.text()));
     const data = await res.json();

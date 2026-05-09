@@ -1,3 +1,19 @@
 {
-  "bookings": []
+  "bookings": [
+    {
+      "id": "22329731-e8eb-40fe-9ab6-1f4bf5e3c867",
+      "date": "2026-05-11",
+      "startTime": "16:30",
+      "endTime": "18:00",
+      "durationMinutes": 90,
+      "studentName": "Test Student",
+      "studentEmail": "jathanhaskell@gmail.com",
+      "topic": "Test",
+      "notes": "",
+      "status": "confirmed",
+      "syncedToGcal": false,
+      "gcalEventId": null,
+      "createdAt": "2026-05-09T14:06:27.759Z"
+    }
+  ]
 }

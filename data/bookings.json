@@ -1,20 +1,3 @@
 {
-  "bookings": [
-    {
-      "id": "44588304-e760-4a93-be92-8302fcf6a78e",
-      "date": "2026-05-11",
-      "startTime": "16:30",
-      "endTime": "18:00",
-      "durationMinutes": 90,
-      "studentName": "Test Student",
-      "studentEmail": "jathanhaskell@gmail.com",
-      "topic": "Test",
-      "notes": "",
-      "status": "cancelled",
-      "syncedToGcal": true,
-      "gcalEventId": null,
-      "createdAt": "2026-05-09T14:07:59.457Z",
-      "cancelledAt": "2026-05-09T14:22:33.115Z"
-    }
-  ]
+  "bookings": []
 }

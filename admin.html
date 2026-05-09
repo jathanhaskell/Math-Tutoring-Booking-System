@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutor Admin · Math Tutor Bookings</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Lock screen -->
+    <div id="lock" class="card lock-screen" style="display:none;">
+      <h2>Admin access</h2>
+      <p class="helper">Enter the admin password to continue.</p>
+      <label for="pw">Password</label>
+      <input type="password" id="pw" autocomplete="current-password" />
+      <div class="button-row">
+        <button class="primary" id="unlock-btn">Unlock</button>
+      </div>
+      <div id="lock-error"></div>
+    </div>
+
+    <!-- Main app -->
+    <div id="app" style="display:none;">
+      <header class="app-header">
+        <h1>Tutor Admin</h1>
+        <div>
+          <button class="secondary" id="lock-btn">Lock</button>
+        </div>
+      </header>
+
+      <div id="status-bar" class="status-bar"></div>
+      <div id="banner"></div>
+
+      <div class="tab-row">
+        <button class="tab-btn active" data-tab="bookings">Bookings</button>
+        <button class="tab-btn" data-tab="add">Add booking</button>
+        <button class="tab-btn" data-tab="sync">Calendar sync</button>
+        <button class="tab-btn" data-tab="github">GitHub sync</button>
+        <button class="tab-btn" data-tab="settings">Settings</button>
+      </div>
+
+      <!-- Bookings tab -->
+      <section class="tab-content active" id="tab-bookings">
+        <div class="card">
+          <h2>Upcoming bookings</h2>
+          <div id="upcoming-list"><p class="empty">No upcoming bookings.</p></div>
+        </div>
+        <div class="card">
+          <h2>Past bookings</h2>
+          <div id="past-list"><p class="empty">No past bookings.</p></div>
+        </div>
+      </section>
+
+      <!-- Add booking tab -->
+      <section class="tab-content" id="tab-add">
+        <div class="card">
+          <h2>Add a booking manually</h2>
+          <p class="helper">Use this when a student has emailed/texted you a booking, or you want to block out a slot.</p>
+          <div id="add-slot-list"><p class="empty">Loading…</p></div>
+        </div>
+
+        <div class="card" id="add-form-card" style="display:none;">
+          <h2>Booking details</h2>
+          <div class="selected-slot-pill" id="add-pill"></div>
+          <div class="row">
+            <div>
+              <label for="add-name">Student name</label>
+              <input type="text" id="add-name" required />
+            </div>
+            <div>
+              <label for="add-email">Student email</label>
+              <input type="email" id="add-email" required />
+            </div>
+          </div>
+          <label for="add-topic">Topic</label>
+          <input type="text" id="add-topic" placeholder="e.g. GCSE algebra" />
+          <label for="add-notes">Notes (optional)</label>
+          <textarea id="add-notes"></textarea>
+          <div class="button-row">
+            <button class="secondary" id="add-back-btn">← Back to slots</button>
+            <button class="primary" id="add-save-btn">Save booking</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sync tab -->
+      <section class="tab-content" id="tab-sync">
+        <div class="card">
+          <h2>Bookings not yet on Google Calendar</h2>
+          <p class="helper">Copy the block below and paste it to Claude with the message: <em>"sync these to my Google Calendar"</em>. Claude will create the events (with the student as an attendee, so they get an email invite) and tell you to mark them synced.</p>
+          <div id="unsynced-list"><p class="empty">All bookings are synced.</p></div>
+          <div class="button-row" id="sync-actions" style="display:none;">
+            <button class="secondary" id="copy-sync-btn">Copy sync payload</button>
+            <button class="primary" id="mark-synced-btn">Mark all as synced</button>
+          </div>
+          <textarea id="sync-payload" style="display:none; margin-top:12px; font-family: monospace; font-size: 0.85rem;"></textarea>
+        </div>
+      </section>
+
+      <!-- GitHub sync tab -->
+      <section class="tab-content" id="tab-github">
+        <div class="card">
+          <h2>Push bookings.json to GitHub</h2>
+          <p class="helper">Updates the public booking page so students see the new availability. Set up once in <strong>Settings</strong>, then click Push whenever you've added/edited bookings.</p>
+          <div id="gh-status"></div>
+          <div class="button-row">
+            <button class="primary" id="gh-push-btn">Push bookings.json</button>
+            <button class="secondary" id="gh-pull-btn">Pull latest from GitHub</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Settings tab -->
+      <section class="tab-content" id="tab-settings">
+        <div class="card">
+          <h2>GitHub credentials</h2>
+          <p class="helper">Stored only in your browser (localStorage). Used to push <code>data/bookings.json</code> to your repo.</p>
+          <label for="gh-owner">GitHub username (owner)</label>
+          <input type="text" id="gh-owner" placeholder="e.g. brayd" />
+          <label for="gh-repo">Repository name</label>
+          <input type="text" id="gh-repo" placeholder="e.g. math-tutor-booking" />
+          <label for="gh-branch">Branch</label>
+          <input type="text" id="gh-branch" placeholder="main" />
+          <label for="gh-token">Personal access token</label>
+          <input type="password" id="gh-token" placeholder="github_pat_…" />
+          <p class="helper">Create a fine-grained PAT with <strong>Contents: Read &amp; Write</strong> on this repo only. See README.</p>
+
+          <h2 style="margin-top:24px;">Admin password</h2>
+          <label for="pw-set">Set/change password</label>
+          <input type="password" id="pw-set" />
+
+          <div class="button-row">
+            <button class="primary" id="settings-save-btn">Save settings</button>
+            <button class="secondary" id="settings-export-btn">Export bookings.json</button>
+            <button class="danger" id="settings-clear-btn">Clear local data</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Local schedule (read-only)</h2>
+          <pre id="schedule-pre" style="background:#f3f4f6; padding:12px; border-radius:8px; overflow-x:auto; font-size:0.85rem;"></pre>
+          <p class="helper">Edit <code>data/availability.json</code> directly to change your weekly schedule.</p>
+        </div>
+      </section>
+
+      <footer class="foot">All booking data lives in <code>data/bookings.json</code>. Pushing to GitHub makes the public booking page reflect changes.</footer>
+    </div>
+  </div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

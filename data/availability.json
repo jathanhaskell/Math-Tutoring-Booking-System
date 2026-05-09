@@ -1,0 +1,17 @@
+{
+  "timeZone": "Africa/Johannesburg",
+  "weekly": {
+    "monday":    [{ "start": "16:30", "end": "18:30" }],
+    "tuesday":   [{ "start": "16:30", "end": "18:30" }],
+    "wednesday": [{ "start": "16:30", "end": "18:30" }],
+    "thursday":  [{ "start": "15:00", "end": "17:00" }],
+    "friday":    [{ "start": "13:30", "end": "15:30" }],
+    "saturday":  [],
+    "sunday":    []
+  },
+  "sessionLengths": [60, 90],
+  "slotGranularityMinutes": 30,
+  "bookingHorizonWeeks": 4,
+  "minNoticeHours": 12,
+  "exceptions": []
+}

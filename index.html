@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Maths Tutoring Session</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1>Book a Maths Session</h1>
+    </header>
+    <p class="tagline">Pick a time below, fill in your details, and you'll receive a calendar invite once it's confirmed.</p>
+
+    <div class="tz-notice" id="tz-notice">All times are shown in <strong id="tz-banner">Africa/Johannesburg</strong> (SAST).</div>
+
+    <div id="banner"></div>
+
+    <section class="card" id="slot-card">
+      <h2>Available times (next 4 weeks)</h2>
+      <div id="slot-list"><p class="empty">Loading availability…</p></div>
+    </section>
+
+    <section class="card" id="form-card" style="display:none;">
+      <h2>Your details</h2>
+      <div class="selected-slot-pill" id="selected-pill"></div>
+      <form id="booking-form" action="https://formsubmit.co/jathanhaskell@gmail.com" method="POST">
+        <input type="hidden" name="_subject" id="subj" value="New tutoring booking" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_honey" id="honey" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="date" id="f-date" />
+        <input type="hidden" name="startTime" id="f-start" />
+        <input type="hidden" name="endTime" id="f-end" />
+        <input type="hidden" name="durationMinutes" id="f-duration" />
+
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+        <p class="helper">Your calendar invite will be sent here.</p>
+
+        <label for="topic">What would you like to cover?</label>
+        <input type="text" id="topic" name="topic" placeholder="e.g. GCSE algebra revision" required />
+
+        <label for="notes">Anything else? (optional)</label>
+        <textarea id="notes" name="notes" placeholder="e.g. specific exam board, difficulty areas"></textarea>
+
+        <div class="button-row">
+          <button type="button" class="secondary" id="back-btn">← Pick a different time</button>
+          <button type="submit" class="primary" id="submit-btn">Request booking</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="foot">Bookings are confirmed manually within 24 hours. Time zone: <span id="tz">Africa/Johannesburg</span>.</footer>
+  </div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

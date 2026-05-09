@@ -10,10 +10,11 @@
       "studentEmail": "jathanhaskell@gmail.com",
       "topic": "Test",
       "notes": "",
-      "status": "confirmed",
+      "status": "cancelled",
       "syncedToGcal": true,
       "gcalEventId": null,
-      "createdAt": "2026-05-09T14:07:59.457Z"
+      "createdAt": "2026-05-09T14:07:59.457Z",
+      "cancelledAt": "2026-05-09T14:22:33.115Z"
     }
   ]
 }

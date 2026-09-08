@@ -27,8 +27,8 @@ python3 build_kdp.py            # both editions
 python3 build_kdp.py parent     # just one
 ```
 
-**Set `AUTHOR` at the top of `build_kdp.py` and rebuild before publishing** — the
-placeholder prints on the cover and title page.
+`AUTHOR` is set to **Jathan Haskell**. `verify.py` fails the build if a
+placeholder ever reappears in any upload file.
 
 ## Why these differ from `../editions/`
 

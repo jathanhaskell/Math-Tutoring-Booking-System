@@ -11,7 +11,7 @@ The author placeholder is baked into the files. Before uploading anything:
 3. Run `python3 verify.py` — should say PASS
 
 It appears on the paperback cover, the paperback title page, **and inside the EPUB
-metadata**. Upload without doing this and your book is published by "[YOUR NAME]".
+metadata**. Upload without doing this and your book is published by "Jathan Haskell".
 
 ---
 
@@ -315,7 +315,7 @@ year. There is no upside here. Release now.
 Four listings: paperback + Kindle for each edition. Everything below is
 ready to paste into the KDP publishing form.
 
-Replace `[YOUR NAME]` everywhere, and set `AUTHOR` at the top of `build_kdp.py`
+Replace `Jathan Haskell` everywhere, and set `AUTHOR` at the top of `build_kdp.py`
 then rebuild before uploading — the placeholder is printed on the cover and title
 page.
 
@@ -339,7 +339,7 @@ The 14-Step System for Leaving Your Parents' House Without Moving Back In
 
 ### Author
 ```
-[YOUR NAME]
+Jathan Haskell
 ```
 
 ### Description

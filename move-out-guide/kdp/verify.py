@@ -2,6 +2,9 @@
 """verify.py — check every KDP upload file against Amazon's spec. Run after build_kdp.py."""
 import pymupdf, zipfile, re, pathlib, sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
+from build_kdp import AUTHOR
+
 U = pathlib.Path(__file__).parent / "upload"
 SPINE_PER_PAGE = 0.002252
 BOOKS = ("The-Move-Out-Blueprint", "The-Move-Out-Blueprint-Parent-Edition")
@@ -18,8 +21,16 @@ for slug in BOOKS:
     p1, p2, p3 = itr[0].get_text(), itr[1].get_text(), itr[2].get_text()
     txt = "\n".join(p.get_text() for p in itr)
     z = zipfile.ZipFile(U / f"{slug}.epub")
+    epub_text = b"".join(z.read(n) for n in z.namelist() if n.endswith((".xhtml", ".opf")))
+    cov_text = "".join(p.get_text() for p in cov)
 
     checks = {
+        "author set (not placeholder)": not AUTHOR.startswith("["),
+        "author on interior":    AUTHOR in txt,
+        "author on print cover": AUTHOR in cov_text,
+        "author in epub":        AUTHOR.encode() in epub_text,
+        "no placeholder in pdf": "YOUR NAME" not in txt and "YOUR NAME" not in cov_text,
+        "no placeholder in epub": b"YOUR NAME" not in epub_text,
         "interior 6x9in":        abs(iw-6) < 0.01 and abs(ih-9) < 0.01,
         "interior >=24pp":       itr.page_count >= 24,
         "cover single page":     cov.page_count == 1,

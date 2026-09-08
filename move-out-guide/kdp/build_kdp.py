@@ -33,7 +33,7 @@ OUT = HERE / "upload"
 sys.path.insert(0, str(EDITIONS))
 import build as digital  # reuse preprocess/postprocess so both stay in step
 
-AUTHOR = "[YOUR NAME]"          # set before publishing
+AUTHOR = "Jathan Haskell"          # printed on covers and title pages
 YEAR = "2026"
 
 # KDP: white paper spine = pages * 0.002252in; cover bleed 0.125in each edge.

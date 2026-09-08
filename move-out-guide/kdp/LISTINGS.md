@@ -242,6 +242,45 @@ A companion edition written for the young adult — fourteen practical steps in 
 
 ---
 
+## Kindle Pricing page — every field
+
+| Field | Value |
+|---|---|
+| **KDP Select Enrollment** | **Enroll** — see below |
+| **Territories** | **All territories (worldwide rights)** — you own the copyright |
+| **Primary marketplace** | Amazon.com |
+| **Royalty plan** | **70%** |
+| **List price** | Core **$4.99** · Parent Edition **$6.99** |
+| **Book Lending** | Leave enabled — mandatory on the 70% plan |
+| **Terms & Conditions** | Accept, then publish |
+
+### KDP Select — the only real decision on this page
+
+Enrolling means **90 days of Amazon exclusivity for the ebook**: you cannot sell
+it on Gumroad, your own site, or anywhere else while enrolled. In exchange you
+get Kindle Unlimited page-read income, promotional tools, and better visibility
+in Amazon's own search.
+
+**Enroll.** For this strategy, exclusivity costs approximately nothing — the
+plan is deliberately Amazon-only, and selling elsewhere with no traffic produces
+no sales anyway. KU readers borrow far more freely than they buy, and a
+practical guide people read through earns real page-read revenue.
+
+Two things to know:
+
+- It **auto-renews** every 90 days unless you switch it off
+- It covers the **content**, not just the file. While enrolled, don't sell the
+  PDF edition from `../editions/` anywhere either
+
+### Why 70% and not 35%
+
+At $4.99 the 70% plan nets **$3.49 minus a delivery fee**. The fee is charged per
+megabyte and the EPUB is only ~67 KB, so it costs about **$0.01** — call it
+**$3.48 per sale**. The 35% plan would net $1.75 for the same sale. There is no
+case for it inside the $2.99–$9.99 band.
+
+---
+
 ## Series setup
 
 | Field | Value |
@@ -391,8 +430,15 @@ Young Adult > Education & Reference > Careers    (if a third slot is offered)
 ### Pricing
 | Format | List price | Notes |
 |---|---|---|
-| Kindle | **$6.99** | Inside the $2.99–$9.99 band, so you get the 70% royalty rate |
-| Paperback | **$14.99** | Above $9.99, so you get the 60% rate; printing cost is deducted |
+| Kindle | **$4.99** | Launch price. Inside the $2.99–$9.99 band, so 70% royalty. Nets ~$3.48 |
+| Paperback | **$14.99** | Above $9.99, so 60% rate; printing cost deducted |
+
+**Why $4.99 and not $6.99.** A 50-page ebook from an author with no reviews is a
+hard sell at $6.99. At $4.99 it's an easy yes, reviews and Kindle Unlimited
+borrows accumulate faster, and early borrows are what build ranking.
+**Raise it to $6.99 once you have 10+ reviews** — price changes take about 24
+hours and carry no penalty, so this is the one decision here you can revisit
+freely.
 
 **Check your exact royalty in KDP's own pricing panel before you publish** — it
 calculates printing cost from your real page count and shows the number.
@@ -466,7 +512,7 @@ Self-Help > Relationships > Dysfunctional Families  (if a third slot is offered)
 ### Pricing
 | Format | List price | Notes |
 |---|---|---|
-| Kindle | **$8.99** | Higher than the core edition on purpose — this buyer has money and a sharper pain |
+| Kindle | **$6.99** | Higher than the core edition on purpose — this buyer is comparing against $1,384/month, not against a coffee |
 | Paperback | **$16.99** | |
 
 ---

@@ -49,6 +49,8 @@ BOOKS = {
         "subtitle": "Leave your parents' house — and don't move back in",
         "kicker": "The 14-step system",
         "backhead": "You think moving out costs $3,000.<br>It's closer to $7,200.",
+        "coversub": "Leave your parents' house — and don't move back in",
+        "covertag": "Your real number. Your real date. The steps between here and your own front door.",
         "blurb": [
             "Between 40 and 60% of young adults who move out end up moving back in "
             "at least once. This is the guide built to prevent that.",
@@ -76,6 +78,8 @@ BOOKS = {
         "subtitle": "Parent Edition — How to help your adult child leave without funding it forever",
         "kicker": "Parent Edition",
         "backhead": "$1,384 a month out.<br>$609 into your own retirement.",
+        "coversub": "How to help your adult child leave without funding it forever",
+        "covertag": "Help that builds capability, help that creates dependency, and how to tell which one you're giving.",
         "blurb": [
             "Parents supporting an adult child hand over an average of $1,384 a "
             "month. The average working parent puts $609 into their own retirement.",
@@ -232,10 +236,9 @@ h1 {{ font-size: 40pt; line-height: 1.02; font-weight: 700; letter-spacing: -0.0
   <div class="front" style="position:relative">
     <div class="kicker">{b['kicker']}</div>
     <h1>{b['title']}</h1>
-    <div class="sub">{b['subtitle']}</div>
+    <div class="sub">{b['coversub']}</div>
     <div class="rule"></div>
-    <div class="tag">Your real number. Your real date. The steps between here and
-      your own front door.</div>
+    <div class="tag">{b['covertag']}</div>
     <div class="author">{AUTHOR}</div>
   </div>
 </div></body></html>"""
@@ -244,6 +247,51 @@ h1 {{ font-size: 40pt; line-height: 1.02; font-weight: 700; letter-spacing: -0.0
     HTML(string=doc).write_pdf(out)
     print(f"    {out.name}  {total_w:.4f}in x {total_h:.4f}in  "
           f"(spine {spine:.4f}in @ {pages}pp)")
+
+
+# ---------------------------------------------------------------- kindle cover
+
+def build_ebook_cover(key: str, b: dict) -> None:
+    """Standalone Kindle cover image. Amazon wants 1600 x 2560 px (1.6:1)."""
+    doc = f"""<!doctype html><html><head><meta charset="utf-8"><style>
+@page {{ size: 1600px 2560px; margin: 0; }}
+* {{ box-sizing: border-box; }}
+body {{ margin: 0; width: 1600px; height: 2560px; background: #12303a;
+        font-family: "Liberation Sans", sans-serif; color: #fff;
+        padding: 260px 150px 0; position: relative; }}
+.kicker {{ font-size: 40px; letter-spacing: 6px; text-transform: uppercase;
+           color: #7fd4bb; margin-bottom: 150px; }}
+h1 {{ font-size: 175px; line-height: 1.02; font-weight: 700; letter-spacing: -3px;
+      margin: 0 0 60px; }}
+.sub {{ font-size: 64px; font-weight: 400; line-height: 1.28; color: #b8e6d7;
+        margin: 0 0 110px; }}
+.rule {{ width: 300px; height: 12px; background: #7fd4bb; }}
+.foot {{ position: absolute; left: 150px; right: 150px; bottom: 200px; }}
+.tag {{ font-size: 54px; font-style: italic; line-height: 1.4; color: #d5e7e1;
+        padding-bottom: 80px; }}
+.author {{ font-size: 56px; letter-spacing: 2px; color: #eaf4f0;
+           border-top: 3px solid #2c5460; padding-top: 60px; }}
+</style></head><body>
+  <div class="kicker">{b['kicker']}</div>
+  <h1>{b['title']}</h1>
+  <div class="sub">{b['coversub']}</div>
+  <div class="rule"></div>
+  <div class="foot">
+    <div class="tag">{b['covertag']}</div>
+    <div class="author">{AUTHOR}</div>
+  </div>
+</body></html>"""
+
+    tmp = OUT / f"_{key}_ebook.pdf"
+    HTML(string=doc).write_pdf(tmp)
+
+    import pymupdf
+    pg = pymupdf.open(tmp)[0]
+    pix = pg.get_pixmap(dpi=96)          # 96dpi => CSS px map 1:1
+    out = OUT / f"{b['slug']}-Kindle-Cover.jpg"
+    pix.save(out, jpg_quality=92)
+    tmp.unlink()
+    print(f"    {out.name}  {pix.width}x{pix.height}px  ({out.stat().st_size/1024:.0f} KB)")
 
 
 # ---------------------------------------------------------------- epub
@@ -346,6 +394,7 @@ def main() -> None:
         print(f"\n{b['slug']}")
         pages = build_interior(k, b)
         build_cover(k, b, pages)
+        build_ebook_cover(k, b)
         build_epub(k, b)
     print(f"\nUpload files in: {OUT}")
     if AUTHOR.startswith("["):

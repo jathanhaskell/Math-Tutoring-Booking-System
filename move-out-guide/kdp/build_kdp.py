@@ -285,13 +285,22 @@ h1 {{ font-size: 175px; line-height: 1.02; font-weight: 700; letter-spacing: -3p
     tmp = OUT / f"_{key}_ebook.pdf"
     HTML(string=doc).write_pdf(tmp)
 
+    import io
     import pymupdf
+    from PIL import Image
+
     pg = pymupdf.open(tmp)[0]
     pix = pg.get_pixmap(dpi=96)          # 96dpi => CSS px map 1:1
+    img = Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGB")
+
+    # KDP wants a baseline (non-progressive) RGB JPEG. Some uploaders reject
+    # progressive encoding, which is what pymupdf's own JPEG writer produces.
     out = OUT / f"{b['slug']}-Kindle-Cover.jpg"
-    pix.save(out, jpg_quality=92)
+    img.save(out, format="JPEG", quality=95, optimize=True,
+             progressive=False, dpi=(300, 300), subsampling=0)
     tmp.unlink()
-    print(f"    {out.name}  {pix.width}x{pix.height}px  ({out.stat().st_size/1024:.0f} KB)")
+    print(f"    {out.name}  {img.width}x{img.height}px baseline RGB "
+          f"({out.stat().st_size/1024:.0f} KB)")
 
 
 # ---------------------------------------------------------------- epub

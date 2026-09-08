@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """verify.py — check every KDP upload file against Amazon's spec. Run after build_kdp.py."""
 import pymupdf, zipfile, re, pathlib, sys
+from PIL import Image
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from build_kdp import AUTHOR
@@ -20,6 +21,7 @@ for slug in BOOKS:
     iw, ih, cw, ch = ir.width/72, ir.height/72, cr.width/72, cr.height/72
     p1, p2, p3 = itr[0].get_text(), itr[1].get_text(), itr[2].get_text()
     txt = "\n".join(p.get_text() for p in itr)
+    kc = Image.open(U / f"{slug}-Kindle-Cover.jpg")
     z = zipfile.ZipFile(U / f"{slug}.epub")
     epub_text = b"".join(z.read(n) for n in z.namelist() if n.endswith((".xhtml", ".opf")))
     cov_text = "".join(p.get_text() for p in cov)
@@ -48,6 +50,10 @@ for slug in BOOKS:
         "epub mimetype stored":  z.getinfo("mimetype").compress_type == zipfile.ZIP_STORED,
         "epub archive intact":   z.testzip() is None,
         "epub has opf":          "OEBPS/content.opf" in z.namelist(),
+        "kindle cover is JPEG":  kc.format == "JPEG",
+        "kindle cover RGB":      kc.mode == "RGB",
+        "kindle cover 1600x2560":kc.size == (1600, 2560),
+        "kindle cover baseline": not kc.info.get("progressive") and not kc.info.get("progression"),
     }
     bad = [k for k, v in checks.items() if not v]
     ok &= not bad

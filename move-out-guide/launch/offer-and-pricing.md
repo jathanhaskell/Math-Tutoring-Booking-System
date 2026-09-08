@@ -1,202 +1,187 @@
-# Offer, Pricing, and the Business Behind the PDF
+# Offer, Pricing, and the Business Behind the PDFs
 
-Blunt version up front: **the PDF is not the business.** A one-time $27
-transaction with no repeat purchase and no retention is a project, not a
-company. This document is about making it a business, or at least making the
-project pay.
+Updated for the two-edition, parent-first strategy.
 
 ---
 
-## 1. Pricing
+## 1. What changed, and why it's better
 
-### The constraint
+The original plan sold one book to broke 24-year-olds. **The current plan sells to
+their parents.** That is a materially better business and it's worth being explicit
+about why:
 
-Your buyer's defining characteristic is that they don't have money. That is
-literally the problem you're solving. Median millennial emergency savings is
-**$300** [S-52]. You cannot charge $97 to someone whose whole complaint is that
-they can't scrape together a deposit.
+| | Old | New |
+|---|---|---|
+| Buyer | The young adult | **The parent** |
+| Buyer's disposable income | Low — it's their whole problem | Materially higher |
+| Buyer's motivation | "I'd like my own place" | "$1,384 a month, and I'm behind on retirement" [S-183][S-184] |
+| Price ceiling | ~$29 | **$39–$59 realistic** |
+| Products | 1 | 3 (core, parent, bundle) |
+| Market size | 25.2M young adults | 25.2M young adults **and their parents** |
 
-### Recommended structure
+The parent has the wallet, the urgency, and a quantifiable pain you can put in a
+headline. That's a better customer on every axis.
+
+**One thing you must not break:** the core edition is *bought* by the parent but
+*read* by the young adult. The sales page speaks to parents. The book speaks to the
+young adult as an adult. If the book sounds like it was written for their parent,
+it doesn't get read, and you get refunds.
+
+---
+
+## 2. Pricing
 
 | Tier | Price | Contents |
 |---|---|---|
-| **Free** | $0 | The Move-Out Number Calculator (Worksheet 2, standalone). Email capture. |
-| **Core** | **$24** | The full 87-page guide, PDF, all 8 worksheets. |
-| **Complete** | **$39** | Core + fillable worksheet pack + budget spreadsheet + lease-review checklist as a separate printable |
-| **Parent edition** | **$49** | Complete + a short "how to help without taking over" section written *for the parent* |
+| **Free lead magnet** | $0 | The Move-Out Number Calculator (Step 1, standalone). Email capture |
+| **Core edition** | **$24** | 50-page guide + Research Basis |
+| **Parent Edition** | **$39** | 41-page guide + Research Basis |
+| **Both-Sides Bundle** | **$49** | Both books + Research Basis |
 
-**Anchor on $24 for the core.** Reasons:
+### Why these numbers
 
-- It's an impulse price for someone with a job — under the "do I need to think
-  about this" line.
-- It's high enough to signal that it isn't a scraped blog post. A $7 ebook reads
-  as worthless. Underpricing costs you conversions, not just margin.
-- It leaves room for a legitimate launch discount without going under $15.
+**Core at $24.** Impulse price. High enough not to read as worthless — a $7 ebook
+signals a scraped blog post and *costs* you conversions.
 
-**Do not price below $15.** You'll attract refund-seekers, you'll signal low
-quality, and payment processing eats a meaningful share of anything under $10.
+**Parent Edition at $39, higher than the core.** Deliberate. The parent has more
+money, a sharper pain, and is comparing against $1,384/month, not against a Netflix
+subscription. Pricing it the same as the core leaves money on the table and signals
+it's a lesser product.
 
-### The parent buyer — the actually interesting idea
+**Bundle at $49** — $14 off buying both. The bundle should be your best seller.
+Price it so it's the obvious choice.
 
-**Your buyer is broke. Their parents are not, and their parents want them out.**
+**Do not go below $15 on anything.** You attract refund-seekers, you signal low
+quality, and processing fees eat a real share.
 
-There are 25.2 million adults under 35 living with a parent [S-01]. That is also
-25.2 million parents. A parent who has been hosting a 26-year-old for four years
-has both the money and the strong motivation, and "I don't know how to help them
-without fighting about it" is a real, unaddressed pain.
+### Test these two things early
 
-The angle: a version framed as *"Help your adult child move out — without
-nagging, and without funding it entirely."* Same core content, plus a section on
-the conversation, on where financial help genuinely helps versus creates
-dependency, and on cosigning (with the risks stated honestly — see Chapter 7).
-
-This is worth testing early. It may be a larger market than the primary one, and
-it certainly has more purchasing power. **Test it before you assume it.**
+1. **Parent Edition at $49 instead of $39.** You may be underpricing. The buyer is comparing to a monthly outflow twenty times larger.
+2. **Bundle-first pricing** — make the bundle the default option on the page and the singles the alternatives.
 
 ---
 
-## 2. Validate before you finish
+## 3. Validate before you polish
 
-**Do not build for three more weeks and then find out.** Run a pre-sale.
+**Do not build more before you find out.** Run a pre-sale.
 
-1. Build a one-page sales page. Headline, the problem, what's inside, price,
-   checkout button.
-2. Drive traffic — a value post, or $50 of ads if you want a faster read.
+1. One page. Headline, problem, what's inside, price, checkout.
+2. Drive traffic — a value post, or $50 of ads for a faster read.
 3. Try to collect **20 real payments.**
 
-**If you cannot sell 20 copies, more content will not fix it.** The problem is
-positioning, price, or audience — and shipping another 30 pages changes none of
-those.
+**If you can't sell 20 copies, more content won't fix it.** The problem would be
+positioning, price, or audience, and another 30 pages changes none of them.
 
-Be honest about pre-sale ethics: state clearly that it's a pre-order with a
-delivery date, and refund immediately and without argument if you miss it.
+Run the pre-sale on the **Parent Edition first.** It has the sharpest headline
+(`$1,384 vs $609`) and the buyer with money. If that doesn't convert, nothing
+downstream will.
 
----
-
-## 3. Positioning — the part that actually matters
-
-**Three competitors already sell a move-out guide** (see
-[`../research/01-demand-evidence.md`](../research/01-demand-evidence.md)).
-"A step-by-step guide to moving out" is a commodity promise. You need a wedge.
-
-Options, strongest first:
-
-**A. The number.** Lead with the shock. Most guides say "save 3× rent." You say
-**$7,200, not $3,000**, and show the four-bucket breakdown that gets you there.
-That's a specific, checkable, contrarian claim — the kind that gets screenshotted
-and argued with, which is free distribution.
-
-**B. Not moving back.** Everyone sells "how to move out." Nobody sells "how to
-not boomerang in month four." The failure mode is the real fear, and it's what
-Chapter 14's sinking-fund system addresses. **This is the strongest positioning
-available and it's what the subtitle already says.**
-
-**C. The emotional chapter.** Competing guides are pure logistics. Chapter 17
-(loneliness, boundaries with parents, redefining success) is a genuine
-differentiator backed by real research [S-54][S-56].
-
-**D. The sourcing.** Every number cited. Most competing products in this space
-have zero citations. Say so on the sales page — "58 cited sources" is a
-credibility claim nobody else in the category can make.
-
-**Pick one for the headline. Do not try to say all four.**
+If you pre-sell, say clearly that it's a pre-order with a delivery date, and refund
+immediately if you miss it.
 
 ---
 
-## 4. Where to sell it
+## 4. Positioning — pick one wedge, not four
+
+Three competitors already sell move-out guides (see
+[`../research/01-demand-evidence.md`](../research/01-demand-evidence.md)). "A guide
+to moving out" is a commodity promise. Options, strongest first:
+
+**A. The two numbers.** `$1,384 vs $609`. Specific, checkable, and it reframes the
+parent's situation in one line. **This is the strongest headline you have** and it's
+why the Parent Edition leads.
+
+**B. Not moving back.** Everyone sells "how to move out." Nobody sells "how to not
+boomerang." 40–60% do [S-055]. That's the actual fear.
+
+**C. The number is double what they think.** $7,200, not $3,000. Contrarian,
+checkable, screenshot-friendly.
+
+**D. 218 cited sources, with the weak evidence flagged.** No competitor in this
+category can match it. The weak-evidence section is the part that proves the other
+217 are real.
+
+**Lead with A on the Parent Edition, C on the core edition.** Use B and D as support
+throughout.
+
+---
+
+## 5. Where to sell
 
 | Platform | Fee | Note |
 |---|---|---|
-| **Gumroad** | ~10% + processing | Easiest start. Where your competitors are. Some built-in discovery. |
-| **Payhip** | 5% free tier, or flat monthly | Cheaper at volume. Handles EU VAT. |
-| **Lemon Squeezy / Paddle** | ~5% + 50¢ | **Merchant of record** — they handle sales tax and VAT globally. Worth it once you have volume. |
-| **Stripe + your own page** | ~2.9% + 30¢ | Cheapest, most work, **you** are liable for sales tax compliance. |
+| **Gumroad** | ~10% + processing | Easiest start. Where your competitors are. Some built-in discovery |
+| **Payhip** | 5% free tier, or flat monthly | Cheaper at volume. Handles EU VAT |
+| **Lemon Squeezy / Paddle** | ~5% + 50¢ | **Merchant of record** — handles sales tax and VAT globally. Worth it once you have volume |
+| **Stripe + own page** | ~2.9% + 30¢ | Cheapest, most work, **you** carry sales tax liability |
 
-**Start on Gumroad.** Optimize later. Platform choice is not what determines
-whether this works.
+**Start on Gumroad.** Platform choice is not what determines whether this works.
 
-**Two things to get right regardless:**
-- **Sales tax / VAT.** Digital products are taxable in many jurisdictions. A
-  merchant of record removes the problem entirely; if you use Stripe directly,
-  understand your obligations before you scale.
-- **Refund policy.** Offer 30 days, no questions. Refund rates on a genuinely
-  good $24 product run low, and a stated guarantee raises conversion by more
-  than the refunds cost. Honor it instantly — arguing about a $24 refund is the
-  worst possible use of your time and reputation.
+Two things to get right regardless:
+
+- **Sales tax / VAT.** Digital products are taxable in many jurisdictions. A merchant of record removes the problem; with Stripe directly, understand your obligations before scaling.
+- **Refunds: 30 days, no questions.** Refund rates on a genuinely good product run low, and the stated guarantee raises conversion by more than the refunds cost. Honour it instantly — arguing over $24 is the worst possible use of your time.
 
 ---
 
-## 5. Unit economics, honestly
+## 6. Unit economics, honestly
 
-At $24, on Gumroad, after fees you keep roughly **$21**.
+Assume a realistic mix: 50% bundle, 30% parent, 20% core → **~$44 average order**.
+After Gumroad fees, roughly **$39 net**.
 
-| Copies/month | Net |
+| Sales/month | Net |
 |---|---|
-| 10 | ~$210 |
-| 50 | ~$1,050 |
-| 200 | ~$4,200 |
+| 10 | ~$390 |
+| 50 | ~$1,950 |
+| 200 | ~$7,800 |
 
-Reaching 200/month organically in a hostile channel takes many months of
-consistent work, not weeks. Reaching 10/month is realistic within the first 90
-days if you actually execute the playbook.
+Compare that to the old single-product model at ~$21 net. **The two-edition,
+parent-first structure roughly doubles revenue per customer** without doubling the
+work — the Research Basis is shared, the build pipeline is shared, and the parent
+book reuses the same research base.
 
-**Plan for the 10.** If you plan for the 200 you'll quit at month two.
-
----
-
-## 6. What you sell second
-
-**Answer this before you launch, not after.** A one-time $24 sale with no
-follow-on means you must find a brand-new stranger for every dollar you earn
-forever. That is the most expensive possible business model.
-
-Options, ranked by fit:
-
-1. **A budget/tracking tool** — spreadsheet or Notion template, $15–$29. Direct
-   sequel to Chapter 14, and the natural next need.
-2. **The credit-building companion** — the single most-searched sub-problem in
-   this niche, and Chapter 5 is only the summary of it.
-3. **The parent edition** — as above. Different buyer, higher price, same content base.
-4. **Localized editions** — a state-specific version (deposit law, tenant rights,
-   rent bands) is meaningfully more useful than a national one and can be priced
-   higher. Also a genuine moat: competitors selling national guides can't match it.
-5. **A cohort or community** — highest revenue per person, highest effort, and
-   only worth it once you know the audience well.
-
-**The list is the asset.** Everything above monetizes the same email list. That
-is the difference between a product and a business.
+**Plan for the 10/month.** Reaching 200 organically in a hostile channel takes many
+months. Planning for 200 is how people quit in month two.
 
 ---
 
-## 7. What would make me tell you to stop
+## 7. What you sell third
 
-Be willing to kill this. The signals:
+Answer this before launch, not after. Ranked by fit:
 
-- **You can't sell 20 pre-orders** after two genuine attempts with real traffic.
-- **Refund rate above 10%.** Means the product doesn't match the promise.
-- **Three months of playbook execution produces under 100 emails.** The channel
-  or the hook is wrong, and grinding harder won't fix it.
-- **You get banned from your top three subreddits** and have no other channel
-  running. This is why Section 9 of the playbook exists.
+1. **The Move-Out Number Calculator, paid version** — an interactive spreadsheet with the sinking-fund tracker. $15–$29. Direct sequel to Step 12
+2. **The credit-building companion** — the single most-searched sub-problem in this niche; Step 4 is only the summary
+3. **State editions** — deposit law, tenant rights and rent bands for one state. Genuinely more useful than a national guide, priceable higher, and a real moat: national-guide competitors can't match it
+4. **A cohort or community for parents** — highest revenue per person, highest effort, only worth it once you know the audience
 
-None of these mean the market is bad — the market is verifiably large [S-01].
-They'd mean your wedge or your channel is wrong, and both are fixable, but only
-if you notice instead of grinding.
+**The email list is the asset.** Everything above monetises the same list.
 
 ---
 
-## 8. The honest summary
+## 8. What would make me tell you to stop
 
-**What's genuinely good here:** a large, verified, growing market; a sharply
-quantified pain; a real content edge in the sourcing and the emotional chapter;
-a finished, professional product.
+Be willing to kill this:
 
-**What's genuinely hard:** low willingness to pay, free information everywhere,
-three known competitors, a hostile primary channel, and no repeat purchase.
+- **Can't sell 20 pre-orders** after two genuine attempts with real traffic
+- **Refund rate above 10%** — the product doesn't match the promise
+- **Three months of playbook execution produces under 100 emails** — the channel or hook is wrong, and grinding harder won't fix it
+- **Banned from your top three subreddits with no other channel running** — which is why the playbook says run two others from day one
 
-**The single highest-leverage thing you can do next** is not editing the PDF.
-It's the pre-sale in Section 2. Twenty real payments tells you more than another
-month of writing, and if you can't get them, everything else in this folder is
-academic.
+None of these mean the market is bad; it's verifiably large [S-049]. They'd mean the
+wedge or the channel is wrong. Both are fixable — but only if you notice.
 
-Go find out.
+---
+
+## 9. Honest summary
+
+**Strong:** large verified growing market · a buyer with money and urgency · three
+products from one research base · 218 cited sources with a weak-evidence section no
+competitor has · a finished, professional product line.
+
+**Hard:** free information everywhere · three known competitors · a hostile primary
+channel · no repeat purchase yet · and a genuine execution risk that the core edition
+drifts into sounding like it was written for parents, which would kill it with its
+actual reader.
+
+**Highest-leverage next action:** the Parent Edition pre-sale in Section 3. Twenty
+real payments tells you more than another month of writing.

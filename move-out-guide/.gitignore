@@ -1,4 +1,4 @@
-ebook/_render.html
-ebook/_preview/
+editions/_*.png
+editions/_render.html
 research/out/
 __pycache__/

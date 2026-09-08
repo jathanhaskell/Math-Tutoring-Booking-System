@@ -142,6 +142,106 @@ parenting young adults advice book
 
 ---
 
+## Plain-text descriptions (no HTML)
+
+KDP renders basic HTML in the description, but plain text is equally valid — and
+KDP's editor has its own bold / heading / bullet buttons, so you can format it in
+the UI after pasting if you want emphasis back.
+
+### Core edition — plain text (3,497 characters)
+
+```
+Your kid thinks moving out costs $3,000. It's closer to $7,200.
+
+Between 40 and 60% of young adults who move out end up moving back in at least once. Not because they're lazy — roughly 70% of 25-to-34-year-olds living with their parents have jobs. They fail for a boring, preventable reason: they budgeted for rent, and rent was never the thing that got them.
+
+It was the $600 car repair in month four. The month hours got cut. The utility deposit that costs more when you have thin credit. The slow bleed of eating out because cooking never became a habit.
+
+The Move-Out Blueprint is fourteen steps, in order. No pep talk, no filler, nothing you have to wade through. Every step ends with a single if-then commitment — a format that produced a medium-to-large improvement in actually reaching the goal across 94 studies.
+
+Part 1 — The number
+
+Most people plan around "three times the rent" and miss half the cost. Step 1 builds the real figure across four buckets: move-in cash, setup costs nobody lists, furnishing, and the reserve month that decides whether you stay out. Step 2 turns it into a dated deadline. Step 3 closes the gap with the three levers ranked by actual leverage — including the one most people ignore.
+
+Part 2 — Getting approved
+
+Landlords want a credit score around 620–670 and gross income of three times the rent. If you've never had a card or a lease you may have no score at all, and screening software often treats that as a decline. Step 4 fixes a thin file in six months, including the move the CFPB found raised the odds of having a credit score by 24%. Step 5 builds the application packet and the cover letter that beats a better credit score. Step 6 covers what to do when the answer is still no.
+
+Part 3 — Finding it
+
+Consumers have reported roughly $65 million in rental-scam losses since 2020, and about half of recent scams started with a fake Facebook ad. Step 7 is the checklist that keeps your deposit. Step 8 is what to actually test at a viewing — most people stand in the middle of the room and nod. Step 9 walks the lease clause by clause, including terms that are illegal in some states.
+
+Part 4 — The move
+
+A two-week runbook in the right order, furnishing in three waves instead of one panicked weekend, and the thirty minutes on move-in day that decide whether you see your deposit again.
+
+Part 5 — Staying out
+
+The money system, food (where new renters quietly lose $200–$250 a month), and the part of month three nobody warns you about.
+
+Why this one is different
+
+Every number is cited. 218 sources — HUD, the CFPB, the FTC, the Bureau of Labor Statistics, the USDA, the U.S. Surgeon General's office, the Harvard Joint Center for Housing Studies, and peer-reviewed research. The full list is included free.
+
+It contradicts the standard advice where the standard advice is wrong. Most guides say download a budgeting app. Research found budget-feedback apps can make people spend more, because seeing "amount left to spend" reassures you there's money left. The system here is built around that finding instead of ignoring it.
+
+It says where the evidence is weak. There's a section for it — including a claim from an earlier draft that was softened when the research came back thinner than the popular version.
+
+Not a motivational book. This is a sequence. And if the honest answer is to wait six months and leave with a real cushion, Step 1 will say so.
+
+A companion Parent Edition, written for the parent helping them, is available separately.
+```
+
+### Parent Edition — plain text (3,216 characters)
+
+```
+You're paying $1,384 a month. You're putting $609 into your own retirement.
+
+Parents supporting an adult child hand over an average of $1,384 a month — more than twice the $609 the average working parent puts into their own retirement. 58% say they have sacrificed their own financial security. Nearly nine in ten say they would sacrifice more. Almost none of them have added up the number.
+
+This is not a book about pressuring them to leave
+
+Pressure doesn't work, and the research on controlling approaches is genuinely bad. A meta-analysis of 53 studies found helicopter parenting associated with reduced self-efficacy — the exact capacity required to move out. You can make this worse by trying harder.
+
+It's also not a book that calls them lazy. About 70% of 25-to-34-year-olds living with a parent are employed, and 49% of American renters now spend more than 30% of income on housing. The world they're launching into is measurably harder than the one you launched into. That isn't an excuse for them; it's context you need before you open your mouth.
+
+What's inside
+
+• Why they haven't left — the real blockers: entry cost, the qualification gate, and the sequence nobody explains
+
+• What it's costing you — the worksheet most parents have never filled in, including what it's doing to your retirement
+
+• A readiness score for them, and one for you. The second is harder, and one row on it predicts more than all the others
+
+• How to open the conversation without it landing as an eviction notice — including the five sentences that end it before it starts
+
+• The written agreement, and "shadow rent": the structure that builds the payment habit and funds the deposit at the same time
+
+• The help ladder — what builds capability versus what quietly substitutes for it, drawn from self-determination theory and financial socialisation research
+
+• Gift, loan, or match — and why matched saving outperforms a straight gift
+
+• Cosigning: the full risk, stated plainly, with the one question that decides whether you sign
+
+• If they move back — 40 to 60% do, and how you respond decides the second attempt
+
+• Protecting your own retirement, including the ceiling to set before the next request arrives
+
+The uncomfortable premise
+
+If you deplete your retirement helping them, you become their financial responsibility in twenty years. Protecting yourself isn't the opposite of generosity. It's the same goal on a longer timeline. The most generous thing available to you is arriving at 80 financially independent.
+
+Honest about the research
+
+Built on 218 cited sources — the U.S. Census, HUD, the CFPB, the Bureau of Labor Statistics, the Harvard Joint Center for Housing Studies, and peer-reviewed work in self-determination theory, financial socialisation and behavioural economics. The full list is included free, with a verification tier on every source.
+
+The parenting findings are correlational. They describe consistent, cross-culturally replicated associations — not a formula that guarantees a result in your family. The book says so, in those words. Your child is not an effect size.
+
+A companion edition written for the young adult — fourteen practical steps in their language — is available separately.
+```
+
+---
+
 ## Series setup
 
 | Field | Value |

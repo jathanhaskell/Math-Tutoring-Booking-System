@@ -142,6 +142,41 @@ parenting young adults advice book
 
 ---
 
+## Series setup
+
+| Field | Value |
+|---|---|
+| **Series Title** | `The Move-Out Blueprint` |
+| **Reading Order** | **Unordered / collection.** These are companion editions, not volumes 1 and 2 |
+| **Series Description** | Plain text below |
+
+**Format note:** enter this as plain text. KDP's book description accepts basic
+HTML; the series description field is not reliably the same, so no tags here —
+plain text renders correctly either way.
+
+```
+Two companion books on one problem: getting out of your parents' house, and staying out.
+
+There are 25.2 million U.S. adults under 35 living with a parent. About 70% of the 25-to-34-year-olds among them have jobs, so this is rarely a motivation problem. It's a structural one — the entry cost is roughly double what most people estimate, the qualification gate assumes a credit history they may not have, and nobody explains the order the steps go in.
+
+And leaving is not the hard part. Between 40 and 60% of young adults who move out end up moving back in at least once. That is the failure this series is built to prevent.
+
+THE MOVE-OUT BLUEPRINT is written for the young adult. Fourteen steps, in order, ending in a single if-then commitment each — the real cost, getting approved with thin credit, finding a place without getting scammed, the lease, the move, and the first ninety days where it usually falls apart.
+
+THE MOVE-OUT BLUEPRINT: PARENT EDITION is written for the parent helping them. What it's actually costing you, how to open the conversation without a fight, which help builds capability and which quietly replaces it, the full risk of cosigning, and what to do if they move back.
+
+The two are designed to be used together. When the Parent Edition says "do Step 1 with them," Step 1 is in their book — and doing that one step at a kitchen table does more than any lecture available to you.
+
+Both are built on the same 218 cited sources: HUD, the CFPB, the FTC, the Bureau of Labor Statistics, the USDA, the U.S. Surgeon General's office, the Harvard Joint Center for Housing Studies, and peer-reviewed research in behavioural economics, self-determination theory and financial socialisation. The complete list ships free with either book — including a section on where the evidence is weaker than the popular claim.
+```
+
+**Why it's worth setting up:** the series page links both books on both product
+pages, permanently, for free. A reader who buys one is shown the other without
+you doing anything. That is the only cross-promotion in this whole plan that
+needs zero maintenance.
+
+---
+
 ## The decisions explained
 
 **Series — use it.** Both books share one name and cross-sell each other. A
